@@ -1,3 +1,38 @@
+<h1 align="center">ACT Learning from Mistakes</h1>
+
+<p align="center">
+Teaching ACT to recover from its own mistakes with intervention learning,<br>
+built on RoboTwin 2.0.
+</p>
+
+| | |
+| --- | --- |
+| Base | RoboTwin 2.0 at `ea8b211` |
+| XPolicyLab | submodule at `fa431ec` |
+| Policy | ACT (Action Chunking with Transformers) |
+| Simulator | RoboTwin 2.0 |
+
+## Idea
+
+ACT only learns from perfect expert demos, so it struggles to recover once
+it drifts off course. This project lets an expert take over when ACT fails,
+adds those corrections to the training data, and retrains.
+
+1. Train a baseline ACT policy on expert demos
+2. Roll out the policy and find where it fails
+3. Let the expert take over and record the correction
+4. Retrain with the new data and repeat
+5. Compare against a control with the same amount of normal demos
+
+## Credits
+
+Built on RoboTwin 2.0 (Chen et al., [arXiv:2506.18088](https://arxiv.org/abs/2506.18088), MIT license)
+and ACT (Zhao et al., [arXiv:2304.13705](https://arxiv.org/abs/2304.13705)).
+
+---
+
+# Upstream README (RoboTwin)
+
 <h1 align="center">
   <a href="https://robotwin-benchmark.github.io"><b>RoboTwin</b> Bimanual Robotic Manipulation Platform<br></a>
 </h1>

@@ -30,3 +30,10 @@ envs/curobo/*
 
 /*.json*
 /*.txt
+
+# project additions
+*.mp4
+wandb/
+*.ckpt
+*.pt
+intervention/**/logs/
